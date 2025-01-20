@@ -35,17 +35,17 @@ class Game:
         while self.state < self.maxState - 1 and won == False:
             self.printGameState()
             letter = input("Entrez une lettre...\n\n").upper()
-            if len(letter) != 1:
+            if ((len(letter) != 1) or (letter in self.testedLetters)):
                 input("Vous n'avez pas entré une lettre ! Appuyez sur entrer pour ré-essayer\n")
             else:
                 if letter in self.word:
-                    print(len(self.discoveredLetters))
-                    print(len(self.word))
                     input("La lettre est dans le mot, bravo !")
+                    
                     for _ in range(self.countLetterInWord(letter, self.word)):
+                        self.testedLetters.append(letter)
                         self.discoveredLetters.append(letter)
                     
-                    if(len(self.discoveredLetters) == len(self.word)):
+                    if((sorted(self.discoveredLetters)==sorted(self.word))):
                         won = True
                 else:
                     input("La lettre n'est pas dans le mot ! Appuyez sur entrer pour ré-essayer\n")
