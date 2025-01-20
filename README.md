@@ -19,6 +19,19 @@ Welcome to the Hangman Game project! This is a classic implementation of the Han
 4) Win the game by guessing the word before the hangman is fully drawn.
     - If you lose, the word will be revealed, and you can start a new game.
 
+## Image of the Game
+### Start: 
+![Image of the Start](./Image/Start.png)
+
+### Middle Game: 
+![Image in the middle of the game](./Image/Middle_Game.png)
+
+### Winning Game:
+![Image of a winning game](./Image/Win.png)
+
+### Losing Game:
+![Image of a losing game](./Image/Lose.png)
+
 ## Installation
 
 ```bash
